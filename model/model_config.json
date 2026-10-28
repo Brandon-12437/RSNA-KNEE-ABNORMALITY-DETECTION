@@ -1,0 +1,29 @@
+{
+    "feature_extractor": "EfficientNetB0",
+    "weights": "imagenet",
+    "include_top": false,
+    "pooling": "avg",
+    "image_size": [
+        224,
+        224
+    ],
+    "num_slices_per_series": 8,
+    "feature_dimension": 1280,
+    "classification_model": "LogisticRegression",
+    "classification_strategy": "OneVsRest",
+    "probability_threshold": 0.5,
+    "target_columns": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+    ]
+}
