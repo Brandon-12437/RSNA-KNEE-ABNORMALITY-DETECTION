@@ -55,3 +55,6 @@ The model predicts the following 12 abnormalities:
 10. Baker's Cyst
 11. Contusion
 12. Fracture
+    
+# DATA VISUALIZATION
+<img width="700" alt="Dataset Overview" src="screenshots/Screenshot%20from%202026-11-13%2012-47-24.png" />
