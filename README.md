@@ -162,7 +162,7 @@ Example request:
           -F "file=@knee_mri_study.zip"
 
 The API processes the uploaded study and returns prediction probabilities for the 12 target abnormalities.
-<img width="700" alt="API Development" src="screenshots/Screenshot%20from%202026-11-13%2013-35-41.png" />
+
 
 <img width="700" alt="API Testing" src="screenshots/Screenshot%20from%202026-11-13%2011-46-29.png" />
 
@@ -171,7 +171,7 @@ The API processes the uploaded study and returns prediction probabilities for th
 After deploying the Docker container to AWS EC2, the public API endpoint was tested:
 
                curl -i http://13.50.105.46:5000/
-
+<img width="700" alt="API Development" src="screenshots/Screenshot%20from%202026-11-13%2013-35-41.png" />
 The endpoint returned:
 - HTTP 200 OK
 - API status: running
