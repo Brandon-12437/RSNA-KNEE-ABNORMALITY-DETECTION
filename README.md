@@ -171,4 +171,22 @@ The API processes the uploaded study and returns prediction probabilities for th
 After deploying the Docker container to AWS EC2, the public API endpoint was tested:
 
                curl -i http://13.50.105.46:5000/
+## CLOUD DEPLOYMENT
+
+The RSNA Knee MRI Disease Detection application is deployed on Amazon Web Services (AWS) using an EC2 instance.
+Backend API — AWS EC2
+The Flask API and trained knee abnormality classification model are deployed on an Ubuntu EC2 instance.
+
+The Dockerized application is hosted on EC2 at:
+
+                            http://13.50.105.46:5000
+
+The /predict endpoint accepts MRI studies in ZIP format, processes the DICOM images, and returns prediction probabilities for 12 knee abnormalities.
+Cloud Infrastructure
+- Cloud Provider: Amazon Web Services (AWS)
+- Compute Service: Amazon EC2
+- Operating System: Ubuntu Server
+- Containerization: Docker
+- API Server: Gunicorn
+- Application Port: 5000
 
