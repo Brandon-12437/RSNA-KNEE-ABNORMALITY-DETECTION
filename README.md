@@ -88,3 +88,30 @@ Logistic Regression was used to perform multi-label classification using the ext
 ### Reproducibility
 
 The trained model components were prepared for deployment and integration with the Flask prediction API.
+
+## Containerization with Docker
+
+Docker was used to containerize the RSNA Knee MRI Prediction API, packaging the application code, model dependencies, and runtime environment into a portable container.
+
+### Docker Configuration
+
+The application was configured using:
+
+- **Base image:** Python slim image
+- **API framework:** Flask
+- **Application server:** Gunicorn
+- **Containerization:** Docker
+- **Application port:** 5000
+
+### Building the Docker Image
+
+The Docker image was built using the Dockerfile:
+
+                         docker build -t rsna-knee-api .
+
+### Running the Container
+
+The container was started with:
+
+                                 docker run -d --name rsna-knee-container -p 5000:5000 rsna-knee-api
+
