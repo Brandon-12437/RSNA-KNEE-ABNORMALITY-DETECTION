@@ -189,6 +189,8 @@ Cloud Infrastructure
 - Containerization: Docker
 - API Server: Gunicorn
 - Application Port: 5000
-
- <img width="700" alt="AWS EC2 Cloud Deployment" src="screenshots/Screenshot%20from%202026-11-13%2012-52-29.png" />
   
+ <img width="700" alt="AWS EC2 Cloud Deployment" src="screenshots/Screenshot%20from%202026-11-13%2012-52-29.png" />
+ 
+  
+<img width="700" alt="AWS Deployment Screenshot" src="screenshots/Screenshot%20from%202026-11-14%2017-40-46.png" />
