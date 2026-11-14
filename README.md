@@ -157,17 +157,23 @@ Prediction Endpoint Testing
 The /predict endpoint accepts an MRI study packaged as a ZIP file.
 
 Example request:
-curl -X POST http://localhost:5000/predict \
-  -F "file=@knee_mri_study.zip"
+
+       curl -X POST http://localhost:5000/predict \
+          -F "file=@knee_mri_study.zip"
 
 The API processes the uploaded study and returns prediction probabilities for the 12 target abnormalities.
-AWS EC2 API Testing
+
+### AWS EC2 API Testing
+
 After deploying the Docker container to AWS EC2, the public API endpoint was tested:
-curl -i http://13.50.105.46:5000/
+
+               curl -i http://13.50.105.46:5000/
 
 The endpoint returned:
 - HTTP 200 OK
 - API status: running
 - Number of prediction labels: 12
-The prediction endpoint is accessible at:
-http://13.50.105.46:5000/predict
+  
+### The prediction endpoint is accessible at:
+
+                      http://13.50.105.46:5000/predict
