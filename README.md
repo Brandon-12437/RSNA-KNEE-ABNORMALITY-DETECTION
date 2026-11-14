@@ -59,3 +59,32 @@ The model predicts the following 12 abnormalities:
 # DATA VISUALIZATION
 <img width="700" alt="Dataset Overview" src="screenshots/Screenshot%20from%202026-11-13%2012-47-24.png" />
 <img width="700" alt="EDA Analysis" src="screenshots/Screenshot%20from%202026-11-13%2015-26-51.png" />
+
+## Model Training and Reproducibility
+
+### Data Splitting
+
+The 58 fully labelled MRI studies were divided into training and validation sets using iterative stratification to maintain the distribution of the 12 target labels.
+
+- Training studies: 47
+- Validation studies: 11
+
+### Feature Extraction
+
+A pretrained EfficientNetB0 model was used as a feature extractor.
+
+- Pretrained weights: ImageNet
+- Input dimensions: 224 × 224 × 3
+- Model configuration: include_top=False
+- Feature extraction: Global Average Pooling
+- Extracted feature dimensions: 1,280
+
+The EfficientNetB0 layers were frozen, allowing the model to extract image features without updating its pretrained weights.
+
+### Classification
+
+Logistic Regression was used to perform multi-label classification using the extracted image features. The classifier generated predictions for the 12 knee abnormality labels.
+
+### Reproducibility
+
+The trained model components were prepared for deployment and integration with the Flask prediction API.
