@@ -113,7 +113,7 @@ The Docker image was built using the Dockerfile:
 
 The container was started with:
 
-                                 docker run -d --name rsna-knee-container -p 5000:5000 rsna-knee-api
+                         docker run -d --name rsna-knee-container -p 5000:5000 rsna-knee-api
 
 <img width="700" alt="AWS Deployment Screenshot" src="screenshots/Screenshot%20from%202026-11-11%2011-39-23.png" />
 
@@ -140,7 +140,7 @@ The API was served using Gunicorn as the production WSGI server and containerize
 API Health Check
 The root endpoint was tested using:
 
-                        curl -i http://localhost:5000/
+                  curl -i http://localhost:5000/
 
 Expected response:
 
@@ -190,3 +190,5 @@ Cloud Infrastructure
 - API Server: Gunicorn
 - Application Port: 5000
 
+ <img width="700" alt="AWS EC2 Cloud Deployment" src="screenshots/Screenshot%20from%202026-11-13%2012-52-29.png" />
+  
