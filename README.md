@@ -58,3 +58,4 @@ The model predicts the following 12 abnormalities:
     
 # DATA VISUALIZATION
 <img width="700" alt="Dataset Overview" src="screenshots/Screenshot%20from%202026-11-13%2012-47-24.png" />
+<img width="700" alt="EDA Analysis" src="screenshots/Screenshot%20from%202026-11-13%2015-26-51.png" />
