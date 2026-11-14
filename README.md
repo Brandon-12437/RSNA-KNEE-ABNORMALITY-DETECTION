@@ -1,3 +1,4 @@
+<img width="700" alt="Knee MRI Visualization" src="screenshots/image_973bc48c.jpg" />
 # RSNA KNEE ABNORMALITY DETECTION
 
 ## Problem Description
