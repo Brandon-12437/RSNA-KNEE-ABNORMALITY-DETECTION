@@ -115,3 +115,4 @@ The container was started with:
 
                                  docker run -d --name rsna-knee-container -p 5000:5000 rsna-knee-api
 
+<img width="700" alt="AWS Deployment Screenshot" src="screenshots/Screenshot%20from%202026-11-11%2011-39-23.png" />
