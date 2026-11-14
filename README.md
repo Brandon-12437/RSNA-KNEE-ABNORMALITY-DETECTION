@@ -1,6 +1,5 @@
-<img width="700" alt="Knee MRI Visualization" src="screenshots/image_973bc48c.jpg" />
 # RSNA KNEE ABNORMALITY DETECTION
-
+<img width="900" src="screenshots/image_973bc48c.jpg" alt="Knee MRI Visualization"/>
 ## Problem Description
 
 Knee abnormalities are common musculoskeletal conditions that can affect mobility, physical function, and quality of life.
