@@ -116,3 +116,58 @@ The container was started with:
                                  docker run -d --name rsna-knee-container -p 5000:5000 rsna-knee-api
 
 <img width="700" alt="AWS Deployment Screenshot" src="screenshots/Screenshot%20from%202026-11-11%2011-39-23.png" />
+
+### API Development and Testing
+The trained knee MRI classification model was integrated into a REST API using Flask to enable external applications to submit MRI studies and receive prediction results.
+API Implementation
+The API provides two main endpoints:
+Method	Endpoint	Description
+GET	/	Checks API health and availability.
+POST	/predict	Accepts an MRI study ZIP file and returns predictions.
+
+
+The prediction endpoint:
+- Accepts MRI DICOM files packaged in a ZIP archive.
+- Processes the uploaded MRI study.
+- Extracts image features using the pretrained EfficientNetB0 model.
+- Passes extracted features to the trained classification model.
+- Returns probabilities for 12 knee abnormalities.
+Running the API
+The API was served using Gunicorn as the production WSGI server and containerized using Docker.
+
+                  docker run -d -p 5000:5000 --name rsna-knee-api rsna-knee-predictor
+
+API Health Check
+The root endpoint was tested using:
+
+                        curl -i http://localhost:5000/
+
+Expected response:
+
+          {
+             "message": "RSNA Knee MRI Prediction API", 
+             "number_of_labels": 12,
+             "status": "running"
+           }
+
+Screenshot:
+<img width="700" alt="API Health Check" src="screenshots/Screenshot%20from%202026-11-11%2011-39-23.png" />
+
+Prediction Endpoint Testing
+The /predict endpoint accepts an MRI study packaged as a ZIP file.
+
+Example request:
+curl -X POST http://localhost:5000/predict \
+  -F "file=@knee_mri_study.zip"
+
+The API processes the uploaded study and returns prediction probabilities for the 12 target abnormalities.
+AWS EC2 API Testing
+After deploying the Docker container to AWS EC2, the public API endpoint was tested:
+curl -i http://13.50.105.46:5000/
+
+The endpoint returned:
+- HTTP 200 OK
+- API status: running
+- Number of prediction labels: 12
+The prediction endpoint is accessible at:
+http://13.50.105.46:5000/predict
